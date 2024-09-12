@@ -82,27 +82,28 @@
             z-index: 1000;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center;
+    gap: 20px;
+}
 
-        nav ul li {
-            margin: 0;
-        }
+nav ul .Logo {
+    margin-right: auto; /* Empuja el logo a la izquierda */
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.2em;
-            transition: color 0.3s, border-bottom 0.3s;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
 
         nav ul li a.active, nav ul li a:hover {
             color: var(--secondary-color);
@@ -304,14 +305,15 @@
 
 
     <nav id="navbar">
-        <ul>
-            <li>MindLab</a></li>
-            <li><a href="#sobre-mi">Sobre Nosotros</a></li>
-            <li><a href="#reseñas">Reseñas</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contactos">Contactos</a></li>
-        </ul>
+    <ul>
+        <li class="Logo"><a href="#">MindLab</a></li>
+        <li><a href="#sobre-mi">Sobre Nosotros</a></li>
+        <li><a href="#reseñas">Reseñas</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+    </ul>
     </nav>
+
 
     <div class="container">
         <section id="sobre-mi">
