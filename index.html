@@ -44,6 +44,28 @@
             font-size: 3em;
             font-weight: 700;
         }
+        .contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+.contact-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
 
         header p {
             margin: 0;
@@ -271,12 +293,15 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+
     <div class="progress-bar" id="progressBar"></div>
 
     <header>
         <h1>MindLab</h1>
         <p>Impulsando tu presencia en redes sociales</p>
     </header>
+    <a href="#contactos" class="contact-button">Contáctanos</a>
+
 
     <nav id="navbar">
         <ul>
