@@ -120,10 +120,8 @@
                 <div class="col-md-6">
                     <p>En MediaLab, somos un equipo de profesionales apasionados por el marketing digital y la innovación tecnológica. Nos especializamos en crear estrategias personalizadas que impulsan el crecimiento y la visibilidad de tu marca en el mundo digital.</p>
                     <p>Nuestra misión es ayudarte a alcanzar tus objetivos mediante soluciones creativas y efectivas.</p>
-                    <!-- Botones de Más Información -->
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre1" id="botonSobre1">Más Información 1</a>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre2" id="botonSobre2">Más Información 2</a>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre3" id="botonSobre3">Más Información 3</a>
+                    <!-- Botón de Más Información -->
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobreNosotros" id="botonMasInfo1">Más Información</a>
                 </div>
                 <div class="col-md-6">
                     <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" class="img-fluid" alt="Equipo MediaLab">
@@ -132,113 +130,120 @@
         </div>
     </section>
 
-    <!-- Modales para Sobre Nosotros -->
-    <!-- Modal Sobre 1 -->
-    <div class="modal fade" id="modalSobre1" tabindex="-1" aria-labelledby="modalSobre1Label" aria-hidden="true">
+    <!-- Modal Sobre Nosotros -->
+    <div class="modal fade" id="modalSobreNosotros" tabindex="-1" aria-labelledby="modalSobreNosotrosLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 id="modalSobre1Label" class="modal-title">Nuestra Historia</h5>
+            <h5 id="modalSobreNosotrosLabel" class="modal-title">Más Sobre Nosotros</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <p>MediaLab nació en la Facultad, donde un grupo de estudiantes apasionados por el marketing digital decidió crear una agencia innovadora...</p>
+            <p>MediaLab nació como un proyecto universitario en nuestra facultad, donde combinamos nuestro conocimiento académico con prácticas reales del mercado...</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal Sobre 2 y 3 similares -->
 
     <!-- Sección Servicios -->
     <section id="servicios" style="background-color: #f9f9f9;">
         <div class="container">
             <h2 class="section-title">Nuestros Servicios</h2>
             <div class="row text-center">
+                <!-- Plan Básico -->
                 <div class="col-md-4">
-                    <i class="fas fa-chart-line fa-3x mb-3" style="color: #4A90E2;"></i>
-                    <h4>Marketing en Redes Sociales</h4>
-                    <p>Gestionamos y optimizamos tus perfiles sociales para aumentar tu alcance y engagement.</p>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio1" id="botonServicio1">Más Información</a>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Plan Básico</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$99 <small class="text-muted">/ mes</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Gestión de redes sociales</li>
+                                <li>2 publicaciones semanales</li>
+                                <li>Reporte mensual</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanBasico" id="botonPlanBasico">Más Información</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Plan Medio -->
                 <div class="col-md-4">
-                    <i class="fas fa-search fa-3x mb-3" style="color: #4A90E2;"></i>
-                    <h4>SEO y SEM</h4>
-                    <p>Mejoramos tu visibilidad en motores de búsqueda para atraer más tráfico a tu sitio web.</p>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio2" id="botonServicio2">Más Información</a>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Plan Medio</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$199 <small class="text-muted">/ mes</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Gestión completa de redes</li>
+                                <li>4 publicaciones semanales</li>
+                                <li>Reporte quincenal</li>
+                                <li>Análisis de competencia</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanMedio" id="botonPlanMedio">Más Información</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Plan Avanzado -->
                 <div class="col-md-4">
-                    <i class="fas fa-bullhorn fa-3x mb-3" style="color: #4A90E2;"></i>
-                    <h4>Publicidad Digital</h4>
-                    <p>Diseñamos campañas publicitarias efectivas para maximizar tu retorno de inversión.</p>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio3" id="botonServicio3">Más Información</a>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0 fw-normal">Plan Avanzado</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$299 <small class="text-muted">/ mes</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Todo del plan medio</li>
+                                <li>Publicidad en redes</li>
+                                <li>Reporte semanal</li>
+                                <li>Estrategia personalizada</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanAvanzado" id="botonPlanAvanzado">Más Información</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modales para Servicios -->
-    <!-- Modal Servicio 1 -->
-    <div class="modal fade" id="modalServicio1" tabindex="-1" aria-labelledby="modalServicio1Label" aria-hidden="true">
+    <!-- Modales para Planes -->
+    <!-- Modal Plan Básico -->
+    <div class="modal fade" id="modalPlanBasico" tabindex="-1" aria-labelledby="modalPlanBasicoLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 id="modalServicio1Label" class="modal-title">Marketing en Redes Sociales</h5>
+            <h5 id="modalPlanBasicoLabel" class="modal-title">Detalles del Plan Básico</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
           </div>
           <div class="modal-body">
-            <p>Gestionamos tus redes sociales con estrategias personalizadas para aumentar tu audiencia y engagement...</p>
+            <p>El Plan Básico es ideal para pequeñas empresas que comienzan en redes sociales...</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal Servicio 2 y 3 similares -->
+    <!-- Modales Plan Medio y Avanzado similares -->
 
     <!-- Sección Reseñas -->
     <section id="resenas">
         <div class="container">
             <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <blockquote class="blockquote">
                         <p>"MediaLab transformó nuestra presencia en línea. Ahora llegamos a más clientes que nunca."</p>
                         <footer class="blockquote-footer">Ana López, <cite title="Empresa X">Empresa X</cite></footer>
                     </blockquote>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena1" id="botonResena1">Más Información</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <blockquote class="blockquote">
                         <p>"El equipo de MediaLab es profesional y comprometido. Altamente recomendados."</p>
                         <footer class="blockquote-footer">Carlos Pérez, <cite title="Empresa Y">Empresa Y</cite></footer>
                     </blockquote>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena2" id="botonResena2">Más Información</a>
-                </div>
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>"Gracias a MediaLab, nuestras ventas en línea se han disparado en los últimos meses."</p>
-                        <footer class="blockquote-footer">Lucía García, <cite title="Empresa Z">Empresa Z</cite></footer>
-                    </blockquote>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena3" id="botonResena3">Más Información</a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Modales para Reseñas -->
-    <!-- Modal Reseña 1 -->
-    <div class="modal fade" id="modalResena1" tabindex="-1" aria-labelledby="modalResena1Label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 id="modalResena1Label" class="modal-title">Testimonio Completo de Ana López</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <p>"Desde que comenzamos a trabajar con MediaLab, nuestra presencia en línea ha crecido exponencialmente. Su equipo es profesional y atento a nuestras necesidades..."</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modales Reseña 2 y 3 similares -->
 
     <!-- Sección Contacto -->
     <section id="contacto" style="background-color: #f9f9f9;">
@@ -262,10 +267,6 @@
                         </div>
                         <button type="submit" class="btn btn-primary" id="botonEnviarMensaje">Enviar Mensaje</button>
                     </form>
-                    <!-- Botones de Más Información -->
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto1" id="botonContacto1">Más Información 1</a>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto2" id="botonContacto2">Más Información 2</a>
-                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto3" id="botonContacto3">Más Información 3</a>
                 </div>
                 <div class="col-md-6">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="img-fluid" alt="Contacto MediaLab">
@@ -273,23 +274,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Modales para Contacto -->
-    <!-- Modal Contacto 1 -->
-    <div class="modal fade" id="modalContacto1" tabindex="-1" aria-labelledby="modalContacto1Label" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 id="modalContacto1Label" class="modal-title">Información Adicional</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <p>Puedes visitarnos en nuestras oficinas ubicadas en...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modales Contacto 2 y 3 similares -->
 
     <!-- Botón Fijo de "Contáctanos" -->
     <div class="contact-button-fixed">
