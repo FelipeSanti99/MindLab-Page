@@ -105,7 +105,7 @@
                                 <li>2 publicaciones semanales</li>
                                 <li>Reporte mensual</li>
                             </ul>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanBasico" id="botonPlanBasico" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información</a>
+                            <a href="#contacto" class="btn btn-primary" id="botonPlanBasico" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información del Plan Básico</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                                 <li>Reporte quincenal</li>
                                 <li>Análisis de competencia</li>
                             </ul>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanMedio" id="botonPlanMedio" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información</a>
+                            <a href="#contacto" class="btn btn-primary" id="botonPlanMedio" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información del Plan Medio</a>
                         </div>
                     </div>
                 </div>
@@ -141,30 +141,13 @@
                                 <li>Reporte semanal</li>
                                 <li>Estrategia personalizada</li>
                             </ul>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPlanAvanzado" id="botonPlanAvanzado" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información</a>
+                            <a href="#contacto" class="btn btn-primary" id="botonPlanAvanzado" style="background-color: #4A90E2; border-color: #4A90E2;">Más Información del Plan Avanzado</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Modales para Planes -->
-    <!-- Modal Plan Básico -->
-    <div class="modal fade" id="modalPlanBasico" tabindex="-1" aria-labelledby="modalPlanBasicoLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 id="modalPlanBasicoLabel" class="modal-title">Detalles del Plan Básico</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            <p>El Plan Básico es ideal para pequeñas empresas que comienzan en redes sociales...</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modales Plan Medio y Avanzado similares -->
 
     <!-- Sección Reseñas -->
     <section id="resenas" style="padding: 60px 0;">
@@ -194,7 +177,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <p>¿Listo para llevar tu negocio al siguiente nivel? Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
-                    <form action="mailto:tucorreo@medialab.com" method="post" enctype="text/plain">
+                    <form id="formularioContacto" action="mailto:tucorreo@medialab.com" method="post" enctype="text/plain">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -259,6 +242,15 @@
         var botones = document.querySelectorAll('a.btn, button.btn');
         botones.forEach(function(boton) {
             boton.addEventListener('click', trackButtonClick);
+        });
+
+        // Evento para el envío del formulario de contacto
+        var formulario = document.getElementById('formularioContacto');
+        formulario.addEventListener('submit', function(event) {
+            dataLayer.push({
+                'event': 'formularioEnviado',
+                'formID': 'formularioContacto'
+            });
         });
     </script>
 </body>
