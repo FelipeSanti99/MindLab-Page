@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -63,6 +62,13 @@
             padding: 30px 0;
             text-align: center;
         }
+        /* Botón Fijo de "Contáctanos" */
+        .contact-button-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
@@ -102,7 +108,7 @@
         <div class="container">
             <h1>Impulsamos tu Presencia Digital</h1>
             <p class="lead">Estrategias efectivas para hacer crecer tu negocio en línea</p>
-            <a href="#contacto" class="btn btn-primary btn-lg mt-4">Contáctanos</a>
+            <a href="#contacto" class="btn btn-primary btn-lg mt-4" id="botonInicio">Contáctanos</a>
         </div>
     </header>
 
@@ -114,7 +120,10 @@
                 <div class="col-md-6">
                     <p>En MediaLab, somos un equipo de profesionales apasionados por el marketing digital y la innovación tecnológica. Nos especializamos en crear estrategias personalizadas que impulsan el crecimiento y la visibilidad de tu marca en el mundo digital.</p>
                     <p>Nuestra misión es ayudarte a alcanzar tus objetivos mediante soluciones creativas y efectivas.</p>
-                    <a href="#servicios" class="btn btn-primary mt-3">Conoce Nuestros Servicios</a>
+                    <!-- Botones de Más Información -->
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre1" id="botonSobre1">Más Información 1</a>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre2" id="botonSobre2">Más Información 2</a>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalSobre3" id="botonSobre3">Más Información 3</a>
                 </div>
                 <div class="col-md-6">
                     <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" class="img-fluid" alt="Equipo MediaLab">
@@ -122,6 +131,23 @@
             </div>
         </div>
     </section>
+
+    <!-- Modales para Sobre Nosotros -->
+    <!-- Modal Sobre 1 -->
+    <div class="modal fade" id="modalSobre1" tabindex="-1" aria-labelledby="modalSobre1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalSobre1Label" class="modal-title">Nuestra Historia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>MediaLab nació en la Facultad, donde un grupo de estudiantes apasionados por el marketing digital decidió crear una agencia innovadora...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Sobre 2 y 3 similares -->
 
     <!-- Sección Servicios -->
     <section id="servicios" style="background-color: #f9f9f9;">
@@ -132,23 +158,40 @@
                     <i class="fas fa-chart-line fa-3x mb-3" style="color: #4A90E2;"></i>
                     <h4>Marketing en Redes Sociales</h4>
                     <p>Gestionamos y optimizamos tus perfiles sociales para aumentar tu alcance y engagement.</p>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio1" id="botonServicio1">Más Información</a>
                 </div>
                 <div class="col-md-4">
                     <i class="fas fa-search fa-3x mb-3" style="color: #4A90E2;"></i>
                     <h4>SEO y SEM</h4>
                     <p>Mejoramos tu visibilidad en motores de búsqueda para atraer más tráfico a tu sitio web.</p>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio2" id="botonServicio2">Más Información</a>
                 </div>
                 <div class="col-md-4">
                     <i class="fas fa-bullhorn fa-3x mb-3" style="color: #4A90E2;"></i>
                     <h4>Publicidad Digital</h4>
                     <p>Diseñamos campañas publicitarias efectivas para maximizar tu retorno de inversión.</p>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalServicio3" id="botonServicio3">Más Información</a>
                 </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#contacto" class="btn btn-primary">Solicita una Consulta</a>
             </div>
         </div>
     </section>
+
+    <!-- Modales para Servicios -->
+    <!-- Modal Servicio 1 -->
+    <div class="modal fade" id="modalServicio1" tabindex="-1" aria-labelledby="modalServicio1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalServicio1Label" class="modal-title">Marketing en Redes Sociales</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Gestionamos tus redes sociales con estrategias personalizadas para aumentar tu audiencia y engagement...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Servicio 2 y 3 similares -->
 
     <!-- Sección Reseñas -->
     <section id="resenas">
@@ -160,22 +203,42 @@
                         <p>"MediaLab transformó nuestra presencia en línea. Ahora llegamos a más clientes que nunca."</p>
                         <footer class="blockquote-footer">Ana López, <cite title="Empresa X">Empresa X</cite></footer>
                     </blockquote>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena1" id="botonResena1">Más Información</a>
                 </div>
                 <div class="col-md-4">
                     <blockquote class="blockquote">
                         <p>"El equipo de MediaLab es profesional y comprometido. Altamente recomendados."</p>
                         <footer class="blockquote-footer">Carlos Pérez, <cite title="Empresa Y">Empresa Y</cite></footer>
                     </blockquote>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena2" id="botonResena2">Más Información</a>
                 </div>
                 <div class="col-md-4">
                     <blockquote class="blockquote">
                         <p>"Gracias a MediaLab, nuestras ventas en línea se han disparado en los últimos meses."</p>
                         <footer class="blockquote-footer">Lucía García, <cite title="Empresa Z">Empresa Z</cite></footer>
                     </blockquote>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalResena3" id="botonResena3">Más Información</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modales para Reseñas -->
+    <!-- Modal Reseña 1 -->
+    <div class="modal fade" id="modalResena1" tabindex="-1" aria-labelledby="modalResena1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalResena1Label" class="modal-title">Testimonio Completo de Ana López</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>"Desde que comenzamos a trabajar con MediaLab, nuestra presencia en línea ha crecido exponencialmente. Su equipo es profesional y atento a nuestras necesidades..."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modales Reseña 2 y 3 similares -->
 
     <!-- Sección Contacto -->
     <section id="contacto" style="background-color: #f9f9f9;">
@@ -197,8 +260,12 @@
                             <label for="mensaje" class="form-label">Mensaje</label>
                             <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary" id="botonEnviarMensaje">Enviar Mensaje</button>
                     </form>
+                    <!-- Botones de Más Información -->
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto1" id="botonContacto1">Más Información 1</a>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto2" id="botonContacto2">Más Información 2</a>
+                    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#modalContacto3" id="botonContacto3">Más Información 3</a>
                 </div>
                 <div class="col-md-6">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="img-fluid" alt="Contacto MediaLab">
@@ -206,6 +273,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Modales para Contacto -->
+    <!-- Modal Contacto 1 -->
+    <div class="modal fade" id="modalContacto1" tabindex="-1" aria-labelledby="modalContacto1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="modalContacto1Label" class="modal-title">Información Adicional</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Puedes visitarnos en nuestras oficinas ubicadas en...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modales Contacto 2 y 3 similares -->
+
+    <!-- Botón Fijo de "Contáctanos" -->
+    <div class="contact-button-fixed">
+        <a href="#contacto" class="btn btn-primary btn-lg" id="botonFijoContacto">Contáctanos</a>
+    </div>
 
     <!-- Pie de Página -->
     <footer>
@@ -222,11 +311,28 @@
     <!-- JavaScript de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Smooth Scroll -->
+    <!-- Google Tag Manager -->
+    <!-- Coloca aquí tu código de Google Tag Manager -->
+
+    <!-- Eventos de seguimiento para Google Tag Manager -->
     <script>
-        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#navbarNav',
-            offset: 70
+        // Inicializar dataLayer si no está definido
+        window.dataLayer = window.dataLayer || [];
+
+        // Función para trackear clics en botones
+        function trackButtonClick(event) {
+            var button = event.target;
+            dataLayer.push({
+                'event': 'botonClick',
+                'botonID': button.id,
+                'botonTexto': button.textContent.trim()
+            });
+        }
+
+        // Agregar event listeners a los botones
+        var botones = document.querySelectorAll('a.btn, button.btn');
+        botones.forEach(function(boton) {
+            boton.addEventListener('click', trackButtonClick);
         });
     </script>
 </body>
