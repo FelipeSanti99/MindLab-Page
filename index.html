@@ -1,410 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Meta Tags Importantes -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MindLab - Especialistas en crecimiento de redes sociales. Descubre cómo nuestro equipo puede ayudarte a mejorar tu presencia digital.">
-    <title>MindLab - Crecimiento en Redes Sociales</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>MediaLab - Agencia de Marketing Digital</title>
+    <meta name="description" content="MediaLab es una agencia de marketing digital especializada en impulsar tu presencia en línea. Descubre nuestros servicios y cómo podemos ayudarte a crecer.">
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MKNFSVZT');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- Estilos Personalizados -->
     <style>
-        :root {
-            --primary-color: #4A90E2;
-            --secondary-color: #003C71;
-            --text-color: #333;
-            --background-color: #f9f9f9;
-            --font-family: 'Roboto', sans-serif;
-        }
-
+        /* Fuentes y Colores */
         body {
-            font-family: var(--font-family);
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            color: #333;
         }
-
+        .navbar-brand, .nav-link {
+            font-weight: bold;
+            color: #4A90E2 !important;
+        }
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 20px;
+            background: url('https://images.unsplash.com/photo-1556761175-129418cb2dfe') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 150px 0;
             text-align: center;
         }
-
         header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: 700;
+            font-size: 4em;
+            font-weight: bold;
         }
-        .contact-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 25px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    z-index: 1000;
-}
-
-.contact-button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
-
-
-        header p {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        nav {
-            background-color: #ffffff;
-            padding: 15px 20px;
-            border-bottom: 1px solid #ddd;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.2em;
-            transition: color 0.3s, border-bottom 0.3s;
-        }
-
-        nav ul li a.active, nav ul li a:hover {
-            color: var(--secondary-color);
-            border-bottom: 3px solid var(--primary-color);
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px 0;
-        }
-
         section {
-            padding: 40px 30px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            position: relative;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            opacity: 0;
-            transform: translateY(20px);
+            padding: 60px 0;
         }
-
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            color: var(--primary-color);
+        .section-title {
             font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .plan {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
-        }
-
-        .plan:hover {
-            background-color: #f1f9ff;
-        }
-
-        .plan h3 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 14px 28px;
-            margin: 10px 5px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            font-size: 18px;
+            margin-bottom: 40px;
             text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            color: #4A90E2;
         }
-
-        .button:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .btn-primary {
+            background-color: #4A90E2;
+            border-color: #4A90E2;
         }
-
+        .btn-primary:hover {
+            background-color: #003C71;
+            border-color: #003C71;
+        }
         footer {
+            background-color: #4A90E2;
+            color: #fff;
+            padding: 30px 0;
             text-align: center;
-            padding: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            border-top: 1px solid #ddd;
-        }
-
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 5px;
-            background: var(--primary-color);
-            z-index: 1000;
-            transition: width 0.25s;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        form label {
-            margin-bottom: 8px;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        form input, form textarea {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
-
-        form input:focus, form textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        form button {
-            align-self: flex-start;
-            padding: 14px 28px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-        }
-
-        form button:hover {
-            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-            transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            nav ul li a {
-                font-size: 1em;
-            }
-
-            .plan {
-                flex-direction: column;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #121212;
-                color: #f9f9f9;
-            }
-
-            header, footer {
-                background-color: var(--secondary-color);
-            }
-
-            nav ul li a {
-                color: #f9f9f9;
-            }
-
-            .button {
-                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            }
         }
     </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKNFSVZT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-
-    <div class="progress-bar" id="progressBar"></div>
-
-    <header>
-        <h1>MindLab</h1>
-        <p>Impulsando tu presencia en redes sociales</p>
-    </header>
-    <a href="#contactos" class="contact-button">Contáctanos</a>
-
-
-    <nav id="navbar">
-    <ul>
-        <li class="Logo"><a href="#">MindLab</a></li>
-        <li><a href="#sobre-mi">Sobre Nosotros</a></li>
-        <li><a href="#reseñas">Reseñas</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contactos">Contactos</a></li>
-    </ul>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MediaLab</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#4A90E2;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resenas">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- Sección de Inicio -->
+    <header id="inicio">
+        <div class="container">
+            <h1>Impulsamos tu Presencia Digital</h1>
+            <p class="lead">Estrategias efectivas para hacer crecer tu negocio en línea</p>
+            <a href="#contacto" class="btn btn-primary btn-lg mt-4">Contáctanos</a>
+        </div>
+    </header>
 
-    <div class="container">
-        <section id="sobre-mi">
-            <h2>Sobre Nosotros</h2>
-            <img src="https://img.freepik.com/foto-gratis/cerrar-mano-sosteniendo-smartphone_23-2149151162.jpg?t=st=1725547777~exp=1725551377~hmac=b514e7dba4668fbf46565318a8595ea57b29a760875df28f26ca7678f8d65df3&w=996" alt="Nuestro equipo trabajando">
-            <p>En MindLab, somos expertos en estrategias de crecimiento para redes sociales. Nuestro equipo está formado por profesionales apasionados por la tecnología y el marketing digital.</p>
-        </section>
-        
-        <section id="reseñas">
-            <h2>Reseñas de Nuestros Clientes</h2>
-            <img src="https://img.freepik.com/foto-gratis/laboratorio-computacion-moderno-equipado_23-2149241262.jpg?t=st=1725547843~exp=1725551443~hmac=5064fa0892ad58cd625d6effa2003d6740479403e58e0de7eb020dad7505ee5e&w=996" alt="Clientes satisfechos">
-            <p>"MindLab transformó nuestras redes sociales, incrementando nuestras interacciones y presencia en línea. ¡Altamente recomendados!" - Thiago Vega, CFO Cresendo</p>
-            <p>"El equipo de MindLab nos ayudó a alcanzar nuevos mercados y aumentar nuestras ventas a través de estrategias en redes sociales." - Juan Pablo Becker, CEO Boca jr.</p>
-            <p>"Profesionales, creativos y con un enfoque único en los resultados. ¡MindLab es la elección correcta para cualquier negocio!" - Ramiro Bendersky, CEO Recytec</p>
-            <a href="#servicios" class="button" data-ga-event="reseñas-servicios">Ver Servicios</a>
-        </section>      
-    
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <img src="https://img.freepik.com/foto-gratis/rompecabezas-contenido-viral-bloques-iconos-aplicaciones_23-2147841385.jpg?t=st=1725548144~exp=1725551744~hmac=5c3cb14259b96ad9b61b58f4ec4a77e9900183070d02ca9d56c770ceba0186cc&w=996" alt="Servicios de redes sociales">
-            <p>Ofrecemos una variedad de servicios para ayudarte a crecer en redes sociales. Desde el análisis de tu presencia digital hasta la implementación de estrategias avanzadas.</p>
-            <div class="plan">
-                <h3>Plan Básico</h3>
-                <p>Incluye estrategias básicas de crecimiento y análisis mensual.</p>
-                <a href="#" class="button">Más Información</a>
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>En MediaLab, somos un equipo de profesionales apasionados por el marketing digital y la innovación tecnológica. Nos especializamos en crear estrategias personalizadas que impulsan el crecimiento y la visibilidad de tu marca en el mundo digital.</p>
+                    <p>Nuestra misión es ayudarte a alcanzar tus objetivos mediante soluciones creativas y efectivas.</p>
+                    <a href="#servicios" class="btn btn-primary mt-3">Conoce Nuestros Servicios</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" class="img-fluid" alt="Equipo MediaLab">
+                </div>
             </div>
-            <div class="plan">
-                <h3>Plan Avanzado</h3>
-                <p>Incluye estrategias avanzadas y análisis semanal.</p>
-                <a href="#" class="button">Más Información</a>
-            </div>
-            <div class="plan">
-                <h3>Plan Premium</h3>
-                <p>Incluye estrategias personalizadas y soporte 24/7.</p>
-                <a href="#" class="button">Más Información</a>
-            </div>
-            
-        </section>
-    
-        <section id="contactos">
-            <h2>Contactos</h2>
-            <img src="https://img.freepik.com/foto-gratis/chica-teniendo-clase-linea-su-tableta_23-2148597998.jpg?t=st=1725548430~exp=1725552030~hmac=de3b7294e770106db921597f9d45cb9acd752a64d67eb6c33571ae81a129ed26&w=996" alt="Imagen de contacto">
-            <form action="mailto:info@mindlab.com" method="post" enctype="text/plain">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
-    </div>
-    
+        </div>
+    </section>
 
+    <!-- Sección Servicios -->
+    <section id="servicios" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-chart-line fa-3x mb-3" style="color: #4A90E2;"></i>
+                    <h4>Marketing en Redes Sociales</h4>
+                    <p>Gestionamos y optimizamos tus perfiles sociales para aumentar tu alcance y engagement.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-search fa-3x mb-3" style="color: #4A90E2;"></i>
+                    <h4>SEO y SEM</h4>
+                    <p>Mejoramos tu visibilidad en motores de búsqueda para atraer más tráfico a tu sitio web.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-bullhorn fa-3x mb-3" style="color: #4A90E2;"></i>
+                    <h4>Publicidad Digital</h4>
+                    <p>Diseñamos campañas publicitarias efectivas para maximizar tu retorno de inversión.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#contacto" class="btn btn-primary">Solicita una Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Reseñas -->
+    <section id="resenas">
+        <div class="container">
+            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"MediaLab transformó nuestra presencia en línea. Ahora llegamos a más clientes que nunca."</p>
+                        <footer class="blockquote-footer">Ana López, <cite title="Empresa X">Empresa X</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"El equipo de MediaLab es profesional y comprometido. Altamente recomendados."</p>
+                        <footer class="blockquote-footer">Carlos Pérez, <cite title="Empresa Y">Empresa Y</cite></footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Gracias a MediaLab, nuestras ventas en línea se han disparado en los últimos meses."</p>
+                        <footer class="blockquote-footer">Lucía García, <cite title="Empresa Z">Empresa Z</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>¿Listo para llevar tu negocio al siguiente nivel? Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    <form action="mailto:tucorreo@medialab.com" method="post" enctype="text/plain">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="img-fluid" alt="Contacto MediaLab">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
     <footer>
-        <p>&copy; 2024 MindLab. Todos los derechos reservados.</p>
+        <div class="container">
+            <p>&copy; 2024 MediaLab. Todos los derechos reservados.</p>
+            <p>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            </p>
+        </div>
     </footer>
 
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Smooth Scroll -->
     <script>
-        // Scroll Progress Bar
-        window.addEventListener('scroll', function() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var docHeight = document.documentElement.scrollHeight;
-            var winHeight = window.innerHeight;
-            var progress = (scrollTop / (docHeight - winHeight)) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade-in Animation
-        document.addEventListener('DOMContentLoaded', function() {
-            var sections = document.querySelectorAll('section');
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbarNav',
+            offset: 70
         });
     </script>
 </body>
